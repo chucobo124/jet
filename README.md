@@ -7,10 +7,13 @@ The Wifi program with Node MCU in Python upload tool.
 2. brew install python
 
 # How to upload Program to device
-1. This is a sample of upload code
-
+1. After you installed python we also need a plugin pyserial.
 ```
-./luatool.py --port /dev/ttyUSB0 --src init.lua --dest init.lua --verbose
+pip install pyserial
+```
+2. This is a sample of upload code
+```
+./luatool.py --port /dev/cu.usbserial --src init.lua --dest init.lua --verbose
 ```
 When cmplete the upload will auto restart node.(AReady edit in the lua)
 
@@ -24,4 +27,6 @@ If you can't access to chip which means you haven't install the driver. You can 
 # Node MCU
 [Node MCU function library ](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en)
 
-Node MCU base on [Lua](http://www.lua.org/). It's easier and lightweight language makes you quickly to be familiar in program logic. 
+[Lua Documentation](http://www.lua.org/pil/contents.html#1)
+
+Node MCU base on [Lua](http://www.lua.org/). It's easier and lightweight language makes you quickly to be familiar in program logic.
