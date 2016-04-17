@@ -5,7 +5,7 @@ outfilename = infilename
 if ARGV.size > 1
   outfilename = ARGV[1]
 end
-connection = SerialPort.new("/dev/cu.usbserial" , 9600 )
+connection = SerialPort.new("/dev/tty.Repleo-PL2303-00002014" , 9600 )
 connection.print("file.remove(\"#{outfilename}\")")
 connection.print("file.open(\"#{outfilename}\", \"w+\")\r")
 file=File.open(infilename)
